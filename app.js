@@ -158,7 +158,7 @@ function insertSequentialData() {
 }
 
 // Call this function to insert data
-insertSequentialData();
+//insertSequentialData();
 
 
 

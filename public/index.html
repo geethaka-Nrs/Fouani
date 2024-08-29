@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs Management</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            padding: 8px;
+            margin: 5px;
+            width: 200px;
+        }
+
+        button {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Processed Data</h1>
+
+    <!-- Table to display data from logs -->
+    <table id="logsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee Number</th>
+                <th>Log Date</th>
+                <th>Process Status</th>
+                <th>OHRM ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Logs data will be appended here by JavaScript -->
+        </tbody>
+    </table>
+
+    <h1>Unprocessed Data</h1>
+
+    <!-- Table to display data from addData -->
+    <table id="dataTable" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee Number</th>
+                <th>Log Date</th>
+                <th>Device Description</th>
+                <th>Process Status</th>
+                
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- addData data will be appended here by JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Add New Log Entry Form -->
+    <h2>Add New Unprocessed Data</h2>
+    <form id="addDataForm" style="display: flex; align-items: center; gap: 10px;">
+        <input type="number" id="employee_num" name="employee_num" placeholder="Employee Number" required>
+        <input type="datetime-local" id="log_date" name="log_date" required>
+        <input type="text" id="device_desc" name="device_desc" placeholder="Device Description" >
+        <input type="text" id="process_status" name="process_status" value="Unprocessed" readonly>
+        
+        <button type="submit">Add Log Entry</button>
+    </form>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
